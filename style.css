@@ -1,0 +1,134 @@
+body {
+  background: #161616;
+  margin: 0;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Consolas, monospace;
+}
+
+#game-container {
+  position: relative;
+  width: 800px;
+  display: block;
+}
+
+#scoreboard {
+  width: 100%;
+  text-align: center;
+  font-size: 52px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 22px;
+  font-family: Consolas, monospace;
+  letter-spacing: 2px;
+}
+
+canvas#pong {
+  display: block;
+  background: #232323;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.85);
+}
+
+#pause-hint {
+  margin-top: 16px;
+  width: 800px;
+  text-align: center;
+  font-size: 18px;
+  color: #ccc;
+  font-family: Consolas, monospace;
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+#settings-panel {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  background: #101010;
+  border-radius: 8px;
+  padding: 14px 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.45);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 290px;
+  font-family: Consolas, monospace;
+}
+
+.setting {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-size: 15px;
+  font-family: Consolas, monospace;
+}
+
+.setting label {
+  justify-self: start;
+  min-width: 110px;
+  text-align: left;
+  font-family: Consolas, monospace;
+}
+
+.setting .input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Consolas, monospace;
+}
+
+.setting input[type=range] {
+  accent-color: #555;
+  width: 120px;
+  background: transparent;
+  font-family: Consolas, monospace;
+}
+
+.setting span {
+  display: inline-block;
+  min-width: 22px;
+  text-align: right;
+  font-family: Consolas, monospace;
+}
+
+#settings-panel,
+.setting label,
+.setting span {
+  color: #fff;
+  font-family: Consolas, monospace;
+}
+
+a.github-btn {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  width: 3em;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #181717;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.45);
+  transition: background 0.2s, transform 0.2s;
+  z-index: 999;
+}
+a.github-btn:hover {
+  background: #24292f;
+  transform: scale(1.15);
+}
+a.github-btn svg {
+  transition: transform 0.2s;
+}
+a.github-btn:hover svg {
+  transform: scale(1.25) rotate(-10deg);
+}
